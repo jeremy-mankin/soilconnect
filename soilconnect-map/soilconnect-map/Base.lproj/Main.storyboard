@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Location View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="UserLocationViewController" customModule="soilconnect_map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ksf-XG-nnb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </mapView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IM8-Gx-S4h">
+                                <rect key="frame" x="20" y="659" width="374" height="223"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="bM5-7G-sAI">
+                                        <rect key="frame" x="20" y="20" width="334" height="123"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjl-N8-Jrj">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmB-SN-VU4">
+                                                <rect key="frame" x="0.0" y="33" width="68" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7J0-K0-tYi">
+                                                <rect key="frame" x="0.0" y="66" width="46" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frL-WO-KeU">
+                                                <rect key="frame" x="0.0" y="99" width="28.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="bM5-7G-sAI" firstAttribute="leading" secondItem="IM8-Gx-S4h" secondAttribute="leading" constant="20" id="4mw-Zw-bim"/>
+                                    <constraint firstItem="bM5-7G-sAI" firstAttribute="top" secondItem="IM8-Gx-S4h" secondAttribute="top" constant="20" id="9j1-U8-hDX"/>
+                                    <constraint firstAttribute="bottom" secondItem="bM5-7G-sAI" secondAttribute="bottom" constant="80" id="H6e-FA-hzb"/>
+                                    <constraint firstAttribute="trailing" secondItem="bM5-7G-sAI" secondAttribute="trailing" constant="20" id="fuu-zi-jTK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ksf-XG-nnb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Em-81-9po"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IM8-Gx-S4h" secondAttribute="trailing" constant="20" id="8Bk-qX-CQe"/>
+                            <constraint firstAttribute="trailing" secondItem="ksf-XG-nnb" secondAttribute="trailing" id="P6b-EJ-86A"/>
+                            <constraint firstItem="IM8-Gx-S4h" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="20" id="PGY-cj-1um"/>
+                            <constraint firstAttribute="bottom" secondItem="ksf-XG-nnb" secondAttribute="bottom" id="Q11-0d-l0p"/>
+                            <constraint firstItem="ksf-XG-nnb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sl3-Y2-6wa"/>
+                            <constraint firstItem="IM8-Gx-S4h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="u5l-YR-Bzr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressLocality" destination="QmB-SN-VU4" id="1os-uA-On5"/>
+                        <outlet property="addressName" destination="Yjl-N8-Jrj" id="m8K-f8-jNe"/>
+                        <outlet property="addressState" destination="7J0-K0-tYi" id="M2f-NW-4hm"/>
+                        <outlet property="addressZipCode" destination="frL-WO-KeU" id="XAH-tK-tNw"/>
+                        <outlet property="mapView" destination="ksf-XG-nnb" id="9hg-yO-hj1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
